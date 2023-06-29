@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: #8B6914;
+}
+.card{
+    position: relative;
+    background: yellow;
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 25px black;
+    overflow: hidden;
+    margin: 20px;
+}
+#card1{
+    background-image: url(../img/capa.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#card2{
+    background-image: url(../img/poster.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#card3{
+    background-image: url(../img/tar.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.cardImg{
+    position: absolute;
+    width: 200px;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: 0.7s;
+}
+.gradientBrackground{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 300px;
+    border-radius: 0 0 15px 15px;
+    background: linear-gradient(to top,#000, transparent);/*#8B6914;*/
+    z-index: 1;
+    transition: 0.7s;
+}
+.card:hover .cardImg{
+    left: calc(50% - 100px);
+    bottom: 100px;
+}
+.card:hover .gradientBrackground{
+    height: 800px;
+}
+@font-face {
+    font-family: "roklin";
+    src: url("../font/roklin/Roklin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "kl";
+    src: url("../font/king_lion/King_Lion.ttf") format("truetype");
+}
+.btnPlay{
+    position: absolute;
+    background: none;
+    border: thin solid #8B6914;
+    color: #8B6914;
+    font-size: 35px;
+    border-radius: 5px;
+    width: 100px;
+    left: calc(50% - 50px);
+    bottom: 0px;
+    opacity: 0;
+    transition: 0.6s;
+    z-index: 2;
+    cursor: pointer;
+    font-family: 'roklin';
+}
+.card:hover .btnPlay{
+    opacity: 1;
+    bottom: 40px;
+}
+#btn1:hover{
+    background-color: #8B6914;
+    color: #000;
+}
+#btn2{
+    border: thin solid #1E90FF;
+    color: #1E90FF;
+}
+#btn2:hover{
+    background-color: #1E90FF;
+    color: #000;
+}
+#btn3{
+    border: thin solid #228B22;
+    color: #228B22;
+}
+#btn3:hover{
+    background-color: #228B22;
+    color: #000;
+}
+.logo{
+    
+    font-family: kl;
+    color: #FFC125;
+    position: absolute;
+    left: calc(50% - 150px);
+    top: 20px;
+    font-size: 250px;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.7s;
+}
+.card:hover .logo{
+    opacity: 0.7;
+    left: calc(50% - 100px);
+    top: 50px;
+    font-size: 300px;
+}
+#logoAvatar{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+.card:hover #logoAvatar{
+    width: 250px;
+    height: 250px;
+    opacity: 0.7;
+    left: calc(50% - 130px);
+    top: 70px;
+}
+@font-face {
+    font-family: "ubunto";
+    src: url("../../../fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+}
+h1{
+    font-family: 'ubunto';
+    width: 100vw;
+    text-align: center;
+    color: #fff;
+}
